@@ -40,6 +40,7 @@ to your taste.
 
 ```bash
 brew install bash-completion # autocomplete in bash (tabbing) for many tools
+brew install gcc # this will take a while...
 brew install git
 brew install mtr # network diagnostic tool, you will use it when somebody asks "did the internet just stop?"
 brew install nmap # network security scanner
