@@ -5,7 +5,7 @@ environment.
 First things first, get Xcode installed. Open `Terminal` and write:
 
 ```bash
-xcode-select —install
+xcode-select --install
 ```
 
 Next, let's install [brew](http://brew.sh/), it makes it easy to install and
@@ -66,8 +66,13 @@ brew cask install spectacle # Easy window management
 brew cask install spotify # Free music :)
 brew cask install vagrant # Great to manage development environments (requires VM software)
 brew cask install virtualbox # Free VMs, `vmware-fussion` is much better but requires $$$
+```
+
+If you want to be able to run Windows applications under your Mac, you can do so with [wine](https://www.winehq.org/). However, it requires [XQuartz](http://xquartz.macosforge.org/landing/).
+
+```bash
 brew cask install xquartz # Needed for wine, it will take ages to install, be patient
-brew cask install wine # run windows programs on your Mac
+brew install wine # run windows programs on your Mac, depends on xquartz
 ```
 
 Now that we have most of our software installed, we can proceed by setting up a
@@ -104,3 +109,5 @@ Open a new tab and you are ready to install `oh-my-zsh`.
 ```bash
 wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
 ```
+
+TODO: Configure `oh-my-zsh` for super-productive shell environment.
