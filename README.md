@@ -72,7 +72,12 @@ If you want to be able to run Windows applications under your Mac, you can do so
 
 ```bash
 brew cask install xquartz # Needed for wine, it will take ages to install, be patient
-brew install wine # run windows programs on your Mac, depends on xquartz
+```
+
+Now that you have `xquartz`, you can install `wine`.
+
+```bash
+brew install wine # run windows programs on your Mac
 ```
 
 Now that we have most of our software installed, we can proceed by setting up a
