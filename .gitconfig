@@ -1,0 +1,54 @@
+[push]
+	default = simple
+[pull]
+	rebase = true
+[alias]
+	# lets you easily edit this config file in your favorite editor
+	ec = config --global -e
+	# shortcuts for very common commands
+	a = add
+	aa = add -A
+	b = branch
+	c = commit
+	co = checkout
+	cm = commit -m
+	fa = fetch --all
+	s = status
+	# Requires the Facebook FPP tool. It's mentioned in the final notes section.
+	fpp = !git status | fpp
+	# a bit more advanced still very common commands
+	cob = !git up && git checkout -b
+	# Rebasing
+	rim = rebase -i master
+	ria = rebase --abort
+	ric = rebase --continue
+	# Cherry-picking
+	cp = cherry-pick
+	cpa = cherry-pick --abort
+	cpc = cherry-pick --continue
+	# Following aliases are mostly borrowed from http://haacked.com/archive/2014/07/28/github-flow-aliases/
+	# pulls with rebases, --prune removes remote tracking branches that
+	# no longer exist on the remote and finally updates submodules
+	# this is very convenient before starting a new branch
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+	# Next two aliases help you save your progress.
+	save = !git add -A && git commit -m 'SAVEPOINT'
+	wip = commit -am "WIP"
+	# Undo a commit to change it.
+	undo = reset HEAD~1 --mixed
+	amend = commit -a --amend
+	# If you work on an idea and you decide to abandon it, this will save it in the
+	# local history (in case you decide to go there later) and wipe it.
+	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+	# Deletes all branches already merged into master!
+	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+	# Tidy up a branch and move back to master
+	bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+	# I don't remember where I found this beautiful git log format but just try it with `git lg`
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /opt/homebrew-cask/Caskroom/sourcetree/2.0.5.2/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
