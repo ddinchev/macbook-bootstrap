@@ -54,10 +54,10 @@ else
 fi
 
 if [ ! -d ~/.oh-my-zsh ] && confirm "Replace bash with (oh-my) zsh?"; then
-    brew install zsh
+    brew install zsh zsh-completions
     chshd 
     # Install oh-my-zsh
-    curl -L http://install.ohmyz.sh | sh
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
 
 if [ -z "$HOMEBREW_CASK_OPTS" ]; then
@@ -74,7 +74,6 @@ if [ -z "$HOMEBREW_CASK_OPTS" ]; then
     fi
 fi
 
-# TODO: Confirm setting the zsh skin to pygmallion
 # TODO: Confirm setting the zsh plugins to certain list 
 
 if confirm "Next step installs everything defined in Brewfile and Caskfile - review them BEFORE you hit ENTER!"; then

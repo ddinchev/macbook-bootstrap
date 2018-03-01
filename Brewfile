@@ -2,7 +2,6 @@ tap 'homebrew/dupes'
 tap 'caskroom/versions'
 
 brew 'tmux'
-brew 'bash-completion' # autocomplete in bash (tabbing) for many tools
 brew 'gcc' # this will take a while...
 brew 'gdb'
 brew 'git' # although git comes with OS X, this way we get the latest version

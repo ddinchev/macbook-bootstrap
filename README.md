@@ -5,11 +5,11 @@ steps needed to install `Command Line Tools`, [brew](http://brew.sh/), update in
 customise it with the truly awesome zsh framework [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), install popular
 software for development, as well as everyday programs.
 
-**But all steps are automated with a a `bootstrap.sh` script** that does that with few prompts to confirm each step. 
-
-And finally I have added my personal `.gitconfig` file with handy shortcuts and tools to support 
+Finally, I have added my personal `.gitconfig` file with handy shortcuts and tools to support 
 [GitHub Flow](https://guides.github.com/introduction/flow/) workflow. It is meant to be forked, customised with your 
 personal software list and ran.
+
+**All steps are automated with a a `bootstrap.sh` script** that does that with few prompts to confirm each step. 
 
 ## How to use this repository
 
