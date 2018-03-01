@@ -115,11 +115,11 @@ alternative to `bash`. After we activate `zsh`, we install [oh-my-zsh](https://g
 will let us customize our shell with some neat completion plugins and git bonuses.
 
 ```bash
-brew install zsh
+brew install zsh zsh-completions
 # Activate it as your new default shell. If you get an "chsh: Operation is not supported..." error, read below.
 chsh -s $(which zsh)
 # Install oh-my-zsh
-curl -L http://install.ohmyz.sh | sh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
 ### chsh: Operation is not supported ...
