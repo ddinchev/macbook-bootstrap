@@ -75,7 +75,7 @@ fi
 
 # TODO: Confirm setting the zsh plugins to certain list 
 
-if confirm "Next step installs everything defined in Brewfile and Caskfile - review them BEFORE you hit ENTER!"; then
+if confirm "Next step installs everything defined in Brewfile - review them BEFORE you hit ENTER!"; then
     # Following will install everything from Brewfile
     info "Depending on the packages you install, you might get promped for your password several times."
     brew bundle

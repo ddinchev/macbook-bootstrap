@@ -82,9 +82,7 @@ brew cask install virtualbox # Free VMs, `vmware-fussion` is much better but req
 Many Mac utils are not GNU compatible and might cause headaches for users accustomed to Linux shells. We can fix that.
 
 ```bash
-brew install coreutils findutils bash # gnu core utils instead of the old and weird ones shipped with MacOS
-brew tap homebrew/dupes
-brew install homebrew/dupes/grep # grep is not part of coreutils
+brew install coreutils findutils bash grep # gnu core utils instead of the old and weird ones shipped with MacOS
 ```
 
 However `coreutils` are installed with `g` prefix by default. We will prepend them to our path **later** (when we 
