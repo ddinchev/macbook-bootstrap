@@ -53,30 +53,33 @@ brew install tig # ncurses based UI for git, just tig in a repo
 brew install fpp # facebook path picker, do a `git status | fpp` to see what it can do
 brew install nmap # network security scanner
 brew install shellcheck # shell script analyzer
-brew install python
 brew install wget
-brew install node
 brew install htop
 brew install nano
 brew install make
 
+# more recent versions of popular programming language environments
+brew install php
+brew install node
+brew install python
+brew install ruby
+
 # Cask installs third party applications
-brew cask install google-chrome
 brew cask install visual-studio-code # open source text editor, has cool VCS features
 brew cask install caffeine # keeps your Mac awake when you want to
 brew cask install flux # adjusts the color temperature of your monitor to ease it on your eyes
-brew cask install dropbox
-brew cask install github
 brew cask install java # includes JDK
 brew cask install iterm2 # great terminal replacement
-brew cask install little-snitch
-brew cask install skype
-brew cask install slack
-brew cask install sourcetree # Great GUI for Git, Subversion and Mercurial
+brew cask install sourcetree # Great git GUI
 brew cask install spectacle # Easy window management
-brew cask install spotify # Free music :)
+
+# Opinionated
+brew cask install google-chrome
 brew cask install vagrant # Great to manage development environments (requires VM software)
-brew cask install virtualbox # Free VMs, `vmware-fussion` is much better but requires $$$
+brew cask install virtualbox # Virtual Machines
+brew cask install spotify
+brew cask install dropbox
+brew cask install slack
 ```
 
 Many Mac utils are not GNU compatible and might cause headaches for users accustomed to Linux shells. We can fix that.
