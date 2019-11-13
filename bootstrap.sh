@@ -54,9 +54,15 @@ else
 fi
 
 if [ ! -d ~/.oh-my-zsh ] && confirm "Replace bash with (oh-my) zsh?"; then
-    brew install zsh zsh-completions
     # Install oh-my-zsh
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+fi
+
+if [ -f ~/.zshrc ] && confirm "Install zsh completions?"; then
+    brew install zsh-completions
+    echo 'fpath=(/usr/local/share/zsh-completions $fpath)' >> ~/.zshrc
+else
+    info "~/.zshrc not found, skipping zsh-completions as well"
 fi
 
 if [ -z "$HOMEBREW_CASK_OPTS" ]; then

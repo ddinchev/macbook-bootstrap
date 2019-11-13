@@ -45,7 +45,7 @@ try to do `brew cask search iterm`, see that the actual package name is `iterm2`
 Now that Brew is installed, we can install everything. This is my list of favorite packages. Customize it to your taste.
 
 ```bash
-brew install bash-completion # autocomplete in bash (tabbing) for many tools
+brew install zsh-completion # autocomplete in zsh (tabbing) for many tools
 brew install gcc # this will take a while...
 brew install git # although git comes with OS X, this way we get the latest version
 brew install mtr # network diagnostic tool, useful when somebody asks "did the internet just stop?"

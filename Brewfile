@@ -1,4 +1,3 @@
-tap 'homebrew/dupes'
 tap 'caskroom/versions'
 
 brew 'tmux'
