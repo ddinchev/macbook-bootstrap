@@ -1,6 +1,6 @@
-# Setup OS X for Development
+# Setup macOS for Software Development
 
-This is my personal process to setup a new OS X for productive development environment. The guide below outlines the 
+This is my personal process setting up productive development environment on a fresh macOS. The guide below outlines the 
 steps needed to install `Command Line Tools`, [brew](http://brew.sh/), update integrated shell tools, install `zsh` and 
 customise it with the truly awesome zsh framework [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh), install popular
 software for development, as well as everyday programs.
